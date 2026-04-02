@@ -1,0 +1,56 @@
+/**
+* This file joins several css files that work together. Finally includes some specific css for rummiclock web.
+*/
+
+@import url("reset.css");
+@import url("color-schema.css");
+@import url("fonts.css");
+@import url("base.css");
+@import url("grid.css");
+@import url("utilites.css");
+@import url("style.css");
+        .timer{
+            font-family: "DSEG7ClassicRegular" ;
+        }
+        #turn-time-input{
+            width: 3.5rem;
+        }
+        #players-list{
+            & > *{
+                border: 1px solid gray;
+                padding: 0.5rem;
+                border-radius: 5px;
+            }
+            & li {
+
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--gray-1);
+                
+
+                &[active]{
+                    list-style-type:"\25b6";
+                    text-shadow: 0px 0px 4px white, 0px 0px 4px white;
+                    font-weight: bold;
+                    background-color: var(--color-7);
+
+
+                }
+                &.dragging {
+                    opacity: 0.5;
+                    border: 1px dashed #000;
+                }
+            }
+            & #remove-div{
+
+                display: none;
+                background-color: coral;
+                margin: 0.5rem 0 0.5rem;
+                &.visible {
+                    display: block;
+                }
+                &.focused{
+                    background-color: red;
+                }
+            }
+        }

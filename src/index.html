@@ -1,13 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
-  </body>
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/rummiclock.css">
+    <script src="./assets/js/activate-wake-lock.js" defer></script>
+    <script src="./assets/js/ordering-by-dragging.js" type="module"></script>
+    <script src="./assets/js/adding-player.js" type="module"></script>
+    <script type="module" src="./assets/js/chrono.js" ></script>
+
+</head>
+<body >
+    <div class="wrapper h-100dvh flex-shrink-0" style="max-width:400px; display: flex; flex-direction: column;max-height: 700px;">
+
+        <!--Controls-->
+        <div>
+            <div class="row justify-content-space-between m-t-1" style="max-width: 400px;">
+                <div>
+                    <label for="turn-time-input">Segons per torn</label>
+                    <input type="number" step="15" name="" id="turn-time-input" value="120">
+                </div>
+                <div class="p-l-1">
+                    <input type="checkbox" name="" id="accumulate-checkbox" checked>
+                    <label for="accumulate-checkbox">Acumular</label>
+                </div>
+    
+            </div>
+            <form action="" id="player-form" class="row m-t-1">
+                <div class="row"style="; align-items: center; gap: 10px; width: 100%; max-width: 400px;">
+                    <label for="add-player-input">Afegir jugador</label>
+                    <input style="flex: 1; min-width: 50px;" type="text" id="add-player-input">
+                    <button type="submit">Afegeix</button>
+                </div>
+            </form>
+            <div class="row gap-0-5 m-t-0-5 m-b-0-5">
+                <button class="flex-grow-1" style="width: 30%" id="pause-button">Pausen</button>
+                <button class="flex-grow-1" style="width: 30%" title="Restablir temps" id="reset-button">Restableix</button>
+                <button class="flex-grow-1" style="width: 30%" id="delete-all-button">Esborra tot</button>
+            </div>
+        </div>
+
+        <!--Players list-->
+        <ul id="players-list" class="flex-grow-1 flex-shrink-1 overflow-y-auto">
+            <template id="list-item-template">
+                <li class="m-t-0-5 m-b-0-5" draggable="true"><span class="player-name" data-time="0">Eduard Sala</span><span class="timer p-l-1">00:00</span></li>
+            </template>
+    
+            <li class="m-t-0-5 m-b-0-5" draggable="true" data-time="10" active><span class="player-name">Antón</span><span class="timer p-l-1">00:00</span></li>
+            <li class="m-t-0-5 m-b-0-5" draggable="true" data-time="0"><span class="player-name">Eduard Sala</span><span class="timer p-l-1">00:00</span></li>
+            <li class="m-t-0-5 m-b-0-5" draggable="true" data-time="0"><span class="player-name">Miquel Martí Pol</span><span class="timer p-l-1">00:00</span></li>
+            <li class="m-t-0-5 m-b-0-5" draggable="true" data-time="0"><span class="player-name">Player</span><span class="timer p-l-1">00:00</span></li>
+            <div id="remove-div" style="height: 60px; text-align: center; line-height: 60px; ";>Eliminar de la llista</div>
+        </ul>
+
+        <!--Start-Next-Button-->
+        <div class="flex-shrink-0">
+            <button class="w-100" style="height: 70px;" id="start-next-button">Inicia</button>
+        </div>
+
+        
+    </div>
+
+    <script>
+
+
+
+
+    </script>
+</body>
 </html>

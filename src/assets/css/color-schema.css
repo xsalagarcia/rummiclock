@@ -1,0 +1,47 @@
+/**
+* This file defines variables related with colors. Defines a color palette.
+*/
+
+/*
+Theme definition. Colors
+*/
+/* Color, from High to low*/
+body { /*Default, no specific class needed*/
+    --color-6: #0f3396;
+    --color-5: #16317c;
+    --color-4: #212f55;
+    --color-3: #242b3d;
+    --color-2: #1e2129;
+    --color-1: #124cfd;
+    --color-7: #3568ff;
+    --color-8: #6e91fa;
+    --color-9: #9ab3ff;
+    --color-10: #cedaff;
+    --contrast-color-6: #0f339618;
+    --contrast-color-5: #0f339625;
+    --contrast-color-4: #0f339633;
+    --contrast-color-3: #0f339658;
+    --contrast-color-2: #0f33967B;
+    --contrast-color-1: #0f33969C;
+    --gray-6: #1e1e1e;
+    --gray-5: #424242;
+    --gray-4: #5c5c5c;
+    --gray-3: #7f7f7f;
+    --gray-2: #a3a3a3;
+    --gray-1: #e6e6e6;
+    --transparent: #ffffff00;
+    --black-transparent-1: #00000011;
+    --black-transparent-2: #00000022;
+    --black-transparent-3: #00000044;
+    --black-transparent-4: #00000066;
+    --black-transparent-5: #00000088;
+    --black-transparent-6: #000000aa;
+    --white-transparent-1: #FFFFFF11;
+    --white-transparent-2: #FFFFFF22;
+    --white-transparent-3: #FFFFFF44;
+    --white-transparent-4: #FFFFFF66;
+    --white-transparent-5: #FFFFFF88;
+    --white-transparent-6: #FFFFFFaa;
+    --almost-white: #efefef;
+}
+
