@@ -2,7 +2,7 @@
  * Dragging actions on the list.
  */
 
-import { playersList, playersListItems, removeDiv } from "./html-elements.js";
+import { playersList, playersListItems, removeDiv, updatePlayersList } from "./html-elements.js";
 
 let draggingElement;
 
@@ -84,4 +84,5 @@ function changeElementsOrder(underElement, draggingElement) {
         else {
             playersList.appendChild(draggingElement)
         }
+        updatePlayersList();
 }
